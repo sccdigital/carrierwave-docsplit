@@ -119,7 +119,7 @@ module CarrierWave
 
           FileUtils.mkdir_p out
 
-          Docsplit.extract_images self.file.path, :size => sizes.values, :output => out
+          Docsplit.extract_images self.file.path, :size => sizes.values, :pages => 1, :format => :jpg, :output => out
         end
       end
     end
